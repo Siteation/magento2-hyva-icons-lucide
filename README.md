@@ -5,7 +5,7 @@
 [![Hyva Themes Module](https://img.shields.io/badge/Hyva_Themes-Module-3df0af.svg?longCache=true&style=for-the-badge)](https://hyva.io/)
 ![License](https://img.shields.io/github/license/fylgja/fylgja?color=%23234&style=for-the-badge)
 
-This Magento 2 module adds the option to use [Lucide Icons](https://github.com/colebemis/lucide) in your Hyva frontend.
+This Magento 2 module adds the option to use [Lucide Icons](https://lucide.dev/) in your Hyva frontend.
 
 This requires that you have a working Hyva frontend,
 this icon pack was made specifically for Hyva Themes and will not work out of the box with any other frontend.
@@ -62,6 +62,7 @@ Bringing svg icon support to you CMS pages, Blocks and Widgets.
 ## Other icon packs for Hyva
 
 - Hero Icons (Default for Hyva)
+- [Feather Icons](https://github.com/Siteation/magento2-hyva-icons-feather)
 - [Bootstrap Icons](https://github.com/Siteation/magento2-hyva-icons-bootstrap)
 - [Payment Icons](https://gitlab.hyva.io/hyva-themes/magento2-payment-icons) (Requires Hyva Gitlab or License to access)
 - [Font Awesome 5 Icons](https://github.com/JaJuMa-GmbH/awesome-hyva)
@@ -70,5 +71,5 @@ _If you are looking for a Luma based option [checkout this icon pack instead](ht
 
 ## Icon License
 
-[Lucide Icons](https://github.com/colebemis/lucide) used in this module were created by [Cole Bemis](https://github.com/lucideicons) under a [MIT License, found here](https://github.com/lucideicons/lucide/blob/master/LICENSE)
+[Lucide Icons](https://lucide.dev/) used in this module were created by [Lucide Contributors](https://github.com/lucideicons) under a [ISC License, found here](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
 
