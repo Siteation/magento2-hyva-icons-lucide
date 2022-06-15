@@ -1,0 +1,26 @@
+{
+  "name": "@sitation/magento2-hyva-icons-lucide",
+  "version": "1.0.0",
+  "description": "the npm pkg is here just here to update the Lucide icons for Hyvä",
+  "homepage": "https://siteation.dev",
+  "author": {
+    "name": "Siteation",
+    "email": "info@siteation.dev",
+    "url": "https://www.siteation.dev"
+  },
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siteation/magento2-hyva-icons-lucide.git"
+  },
+  "bugs": "https://github.com/Siteation/magento2-hyva-icons-feather/issues",
+  "scripts": {
+    "build:icons": "cp -r ./node_modules/lucide-static/icons/* ./view/frontend/web/svg/lucide",
+    "build:signature": "./bin/generate-icons-signatures",
+    "build": "npm run build:icons && npm run build:signature"
+  },
+  "devDependencies": {
+    "lucide-static": "^0.61.0"
+  }
+}
