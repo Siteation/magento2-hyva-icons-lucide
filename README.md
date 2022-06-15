@@ -19,7 +19,7 @@ composer require siteation/magento2-hyva-icons-lucide
 bin/magento setup:upgrade
 ```
 
-> **Warn** This Module requires Magento 2.4 or higher and requires Hyva!
+> **Warning** This Module requires Magento 2.4 or higher and requires Hyva!
 > For more requirements see the `composer.json`.
 
 ## How to use
