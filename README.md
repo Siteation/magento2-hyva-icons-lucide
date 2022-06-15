@@ -57,7 +57,7 @@ Bringing svg icon support to you CMS pages, Blocks and Widgets.
 
 [For more information on how and what see the Hyva Docs](https://docs.hyva.io/hyva-themes/writing-code/working-with-view-models/svgicons.html#using-svg-icons-in-cms-content)
 
-> This feature is supported since Hyva v1.1.12 and Siteation/magento2-hyva-icons-lucide v1.2
+> This feature is supported since Hyva v1.1.12
 
 ## Other icon packs for Hyva
 
