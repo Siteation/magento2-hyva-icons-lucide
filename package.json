@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/Siteation/magento2-hyva-icons-lucide.git"
   },
-  "bugs": "https://github.com/Siteation/magento2-hyva-icons-feather/issues",
+  "bugs": "https://github.com/Siteation/magento2-hyva-icons-lucide/issues",
   "scripts": {
     "build:icons": "cp -r ./node_modules/lucide-static/icons/* ./view/frontend/web/svg/lucide",
     "build:signature": "./bin/generate-icons-signatures",
