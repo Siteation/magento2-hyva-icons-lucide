@@ -21,6 +21,6 @@
     "build": "npm run build:icons && npm run build:signature"
   },
   "devDependencies": {
-    "lucide-static": "^0.181.0"
+    "lucide-static": "^0.233.0"
   }
 }
