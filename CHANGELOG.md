@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update Lucide icons to v0.268
 
+### Fixed
+- Location for iconPathPrefix
+
 ## [1.0.8] - 2023-07-02
 ### Changed
 - Update Lucide icons to v0.257
