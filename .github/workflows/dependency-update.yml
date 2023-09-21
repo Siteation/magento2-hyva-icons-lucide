@@ -1,4 +1,4 @@
-name: Build
+name: Dependency Update
 
 env:
   NODE: 18
@@ -11,8 +11,8 @@ on:
       - closed
 
 jobs:
-  build:
-    name: Build Icons
+  dependency_update:
+    name: Update icons
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
@@ -22,18 +22,16 @@ jobs:
           node-version: "${{ env.NODE }}"
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - name: build new icons
-        run: npm run build
-      - name: Commit Icons
+      - run: npm run build
+      - name: Creating PR for new Icons
         run: |-
-          timestamp=$(date -u)
-          current_day=$(date +"%Y-%m-%d")
+          timestamp=$(date +"%Y-%m-%d")
           git config user.name ${{ env.GIT_USER }}
           git config user.email ${{ env.GIT_EMAIL }}
-          git checkout -b "actions/new-icons-${current_day}_${{ env.GITHUB_RUN_NUMBER }}"
+          git checkout -b "actions/new-icons-${timestamp}_${{ env.GITHUB_RUN_NUMBER }}"
           git add -A
-          git commit -m "Latest data: ${timestamp}" || exit 0
-          git push --set-upstream origin actions/update-icons-${current_day}_${{ env.GITHUB_RUN_NUMBER }}
-          gh pr create --title "Update Adding new icons" --body "This adds the latest icons from lucide" -B main --label dependencies
+          git commit -m "Update icons with dependency update" || exit 0
+          git push --set-upstream origin actions/update-icons-${timestamp}_${{ env.GITHUB_RUN_NUMBER }}
+          gh pr create --title "Update icons with new dependency update" --body "This updates the Hyva version with the latest icons from LucideIcons" -B main --label dependencies
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
