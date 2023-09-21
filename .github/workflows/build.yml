@@ -19,8 +19,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup Git
         run: |-
-          git config --global user.email "<${{ env.NAME }}@github.com>"
-          git config --global user.name "iconbot[bot]"
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
           git checkout -b new-icons-${{ env.NAME }}
       - name: Setup NPM
         run: npm ci
@@ -28,6 +28,7 @@ jobs:
         run: bin/generate-icons-signatures
       - name: Commit Icons
         run: |-
-          git diff
-          git add . && git commit -m "Updated Icons"
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Latest data: ${timestamp}" || exit 0
           git push
