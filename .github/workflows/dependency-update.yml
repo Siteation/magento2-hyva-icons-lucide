@@ -4,6 +4,7 @@ env:
   NODE: 18
   GIT_USER: "Automated"
   GIT_EMAIL: "actions@users.noreply.github.com"
+  GIT_BRANCH: actions/update-icons
 
 on:
   pull_request:
@@ -28,8 +29,8 @@ jobs:
           timestamp=$(date +"%Y-%m-%d")
           git config user.name ${{ env.GIT_USER }}
           git config user.email ${{ env.GIT_EMAIL }}
-          git checkout -b "actions/new-icons-${timestamp}"
-          git push origin actions/update-icons-${timestamp}
+          git checkout -b "${{ env.GIT_BRANCH }}-${timestamp}"
+          git push origin ${{ env.GIT_BRANCH }}-${timestamp}
           git add -A
           git commit -m "Update icons with dependency update" || exit 0
           git push
