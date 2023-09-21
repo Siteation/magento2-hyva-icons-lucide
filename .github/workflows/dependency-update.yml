@@ -28,10 +28,10 @@ jobs:
           timestamp=$(date +"%Y-%m-%d")
           git config user.name ${{ env.GIT_USER }}
           git config user.email ${{ env.GIT_EMAIL }}
-          git checkout -b "actions/new-icons-${timestamp}_${{ env.GITHUB_RUN_NUMBER }}"
+          git checkout -b "actions/new-icons-${timestamp}"
           git add -A
           git commit -m "Update icons with dependency update" || exit 0
-          git push --set-upstream origin actions/update-icons-${timestamp}_${{ env.GITHUB_RUN_NUMBER }}
+          git push --set-upstream origin actions/update-icons-${timestamp}
           gh pr create --title "Update icons with new dependency update" --body "This updates the Hyva version with the latest icons from LucideIcons" -B main --label dependencies
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
