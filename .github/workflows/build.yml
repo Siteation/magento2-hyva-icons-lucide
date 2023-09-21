@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  workflow_dispatch
+
+env:
+  NODE: 18
+  NAME: 21092023
+
+jobs:
+  build:
+    name: Build Icons
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+          registry-url: https://registry.npmjs.org/
+      - name: Setup Git
+        run: |-
+          git config --global user.email "<${{ env.NAME }}@github.com>"
+          git config --global user.name "iconbot[bot]"
+          git checkout -b new-icons-${{ env.NAME }}
+      - name: Setup NPM
+        run: npm ci
+      - name: build icons
+        run: bin/generate-icons-signatures
+      - name: Commit Icons
+        run: |-
+          git add ./view/frontend/web/svg/lucide && git commit -m "Updated Icons"
+          git push
