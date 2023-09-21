@@ -28,3 +28,4 @@ jobs:
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push --set-upstream origin actions/new-icons
+          gh pr create --title "🤖: Adding new icons" --body "This adds the latest icons from lucide" -r @grimlink -B main
