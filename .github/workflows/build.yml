@@ -23,7 +23,7 @@ jobs:
         run: |-
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
-          git checkout - "actions/new-icons"
+          git checkout -b "actions/new-icons"
           git add -A
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
