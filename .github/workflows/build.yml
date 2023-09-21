@@ -28,5 +28,5 @@ jobs:
         run: bin/generate-icons-signatures
       - name: Commit Icons
         run: |-
-          git add ./view/frontend/web/svg/lucide && git commit -m "Updated Icons"
+          git add view/frontend/web/svg/lucide && git commit -m "Updated Icons"
           git push
