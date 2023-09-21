@@ -18,7 +18,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - name: build icons
-        run: bin/generate-icons-signatures
+        run: npm run build
       - name: Commit Icons
         run: |-
           git config user.name "Automated"
