@@ -21,13 +21,14 @@ jobs:
         run: npm run build
       - name: Commit Icons
         run: |-
+          timestamp=$(date -u)
+          current_day=$(date +"%Y-%m-%d")
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
-          git checkout -b "actions/new-icons"
+          git checkout -b "actions/new-icons-${current_day}"
           git add -A
-          timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
-          git push --set-upstream origin actions/new-icons
+          git push --set-upstream origin actions/new-icons-${current_day}
           gh pr create --title "🤖: Adding new icons" --body "This adds the latest icons from lucide" -B main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
