@@ -5,6 +5,7 @@ on:
 
 env:
   NODE: 18
+  REVIEWER: siteation/magento
 
 jobs:
   build:
@@ -17,7 +18,7 @@ jobs:
           node-version: "${{ env.NODE }}"
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - name: build icons
+      - name: build new icons
         run: npm run build
       - name: Commit Icons
         run: |-
@@ -29,6 +30,6 @@ jobs:
           git add -A
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push --set-upstream origin actions/new-icons-${current_day}
-          gh pr create --title "🤖: Adding new icons" --body "This adds the latest icons from lucide" -B main
+          gh pr create --title "🤖: Adding new icons" --body "This adds the latest icons from lucide" -B main --reviewer ${{ env.REVIEWER }}
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
