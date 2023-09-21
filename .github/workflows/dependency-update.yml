@@ -10,6 +10,8 @@ on:
   pull_request:
     types:
       - closed
+    branches:
+      - 'dependabot/**'
 
 jobs:
   dependency_update:
