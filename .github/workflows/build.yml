@@ -5,7 +5,8 @@ on:
 
 env:
   NODE: 18
-  REVIEWER: siteation/magento
+  GIT_USER: "Automated"
+  GIT_EMAIL: "actions@users.noreply.github.com"
 
 jobs:
   build:
@@ -24,12 +25,12 @@ jobs:
         run: |-
           timestamp=$(date -u)
           current_day=$(date +"%Y-%m-%d")
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          git checkout -b "actions/new-icons-${current_day}"
+          git config user.name ${{ env.GIT_USER }}
+          git config user.email ${{ env.GIT_EMAIL }}
+          git checkout -b "actions/new-icons-${current_day}_${{ env.GITHUB_RUN_NUMBER }}"
           git add -A
           git commit -m "Latest data: ${timestamp}" || exit 0
-          git push --set-upstream origin actions/new-icons-${current_day}
+          git push --set-upstream origin actions/update-icons-${current_day}_${{ env.GITHUB_RUN_NUMBER }}
           gh pr create --title "Update Adding new icons" --body "This adds the latest icons from lucide" -B main --label dependencies
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
