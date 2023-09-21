@@ -30,6 +30,6 @@ jobs:
           git add -A
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push --set-upstream origin actions/new-icons-${current_day}
-          gh pr create --title "Update Adding new icons" --body "This adds the latest icons from lucide" -B main --reviewer ${{ env.REVIEWER }} --label dependencies
+          gh pr create --title "Update Adding new icons" --body "This adds the latest icons from lucide" -B main --label dependencies
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
