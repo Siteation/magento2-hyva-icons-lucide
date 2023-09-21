@@ -27,4 +27,4 @@ jobs:
           git add -A
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
-          git push
+          git push --set-upstream origin actions/new-icons
