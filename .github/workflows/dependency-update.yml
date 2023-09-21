@@ -30,10 +30,9 @@ jobs:
           git config user.name ${{ env.GIT_USER }}
           git config user.email ${{ env.GIT_EMAIL }}
           git checkout -b "${{ env.GIT_BRANCH }}-${timestamp}"
-          git push origin ${{ env.GIT_BRANCH }}-${timestamp}
           git add -A
           git commit -m "Update icons with dependency update" || exit 0
-          git push
+          git push --set-upstream origin ${{ env.GIT_BRANCH }}-${timestamp}
           gh pr create --title "Update icons with new dependency update" --body "This updates the Hyva version with the latest icons from LucideIcons" -B main --label dependencies
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
