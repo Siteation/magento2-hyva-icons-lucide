@@ -10,14 +10,14 @@ on:
   pull_request:
     types:
       - closed
-    branches:
-      - 'dependabot/**'
 
 jobs:
   dependency_update:
     name: Update icons
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'dependabot/')
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
