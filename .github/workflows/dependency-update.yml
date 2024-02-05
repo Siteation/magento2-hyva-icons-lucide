@@ -1,7 +1,7 @@
 name: Dependency Update
 
 env:
-  NODE: 18
+  NODE: 20
   GIT_USER: "Automated"
   GIT_EMAIL: "actions@users.noreply.github.com"
   GIT_BRANCH: actions/update-icons
