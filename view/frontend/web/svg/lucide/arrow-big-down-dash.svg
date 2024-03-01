@@ -1,4 +1,4 @@
-<!-- @license lucide-static v0.320.0 - ISC -->
+<!-- @license lucide-static v0.343.0 - ISC -->
 <svg
   class="lucide lucide-arrow-big-down-dash"
   xmlns="http://www.w3.org/2000/svg"
@@ -12,5 +12,5 @@
   stroke-linejoin="round"
 >
   <path d="M15 5H9" />
-  <path d="M15 9v3h4l-7 7-7-7h4V9h6z" />
+  <path d="M15 9v3h4l-7 7-7-7h4V9z" />
 </svg>
