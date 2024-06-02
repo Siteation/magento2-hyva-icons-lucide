@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.5] - 2024-06-02
+### Changed
+- Update Lucide icons to v0.381
+
 ## [2.0.4] - 2024-05-01
 ### Changed
 - Update Lucide icons to v0.376
