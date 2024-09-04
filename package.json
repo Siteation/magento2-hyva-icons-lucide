@@ -16,7 +16,7 @@
   },
   "bugs": "https://github.com/Siteation/magento2-hyva-icons-lucide/issues",
   "scripts": {
-    "build:icons": "cp -r ./node_modules/lucide-static/icons/*.svg ./view/frontend/web/svg/lucide",
+    "build:icons": "rm ./view/frontend/web/svg/lucide/*.svg && cp -r ./node_modules/lucide-static/icons/*.svg ./view/frontend/web/svg/lucide",
     "build:signature": "./bin/generate-icons-signatures",
     "build": "npm run build:icons && npm run build:signature"
   },
