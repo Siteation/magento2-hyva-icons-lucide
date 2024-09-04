@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2024-09-04
 ### Added
 - svgo to build actions, to improve svg size and remove the lucide css class from the svg
 
