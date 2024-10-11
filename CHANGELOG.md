@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.3] - 2024-10-11
 ### Fixed
 - Moved `SvgIcons` argument from global scope to frontend and adminthtml scope
 
