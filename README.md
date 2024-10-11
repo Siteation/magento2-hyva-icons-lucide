@@ -67,5 +67,5 @@ _If you are looking for a Luma based option [checkout this icon pack instead](ht
 
 ## Icon License
 
-[Lucide Icons](https://lucide.dev/) used in this module were created by [Lucide Contributors](https://github.com/lucideicons) under a [ISC License, found here](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
+[Lucide Icons](https://lucide.dev/) used in this module were created by [Lucide Contributors](https://github.com/lucide-icons) under a [ISC License, found here](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
 
