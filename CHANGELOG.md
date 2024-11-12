@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2024-11-12
+### Changed
+- Update Lucide icons to v0.454,
+  **Minor Breaking Change** Includes icon name changes in https://github.com/lucide-icons/lucide/releases/tag/0.447.0
+
 ## [2.1.3] - 2024-10-11
 ### Fixed
 - Moved `SvgIcons` argument from global scope to frontend and adminthtml scope
