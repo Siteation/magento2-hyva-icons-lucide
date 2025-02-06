@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-[unreleased]: https://github.com/Siteation/magento2-hyva-icons-lucide/compare/2.2.2...main
+[unreleased]: https://github.com/Siteation/magento2-hyva-icons-lucide/compare/2.2.3...main
+
+## 2.2.3 - 2025-02-06
+
+### Changed
+- Update Lucide icons to v0.473
 
 ## 2.2.2 - 2025-01-10
 
