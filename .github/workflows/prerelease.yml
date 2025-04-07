@@ -1,4 +1,9 @@
-name: Dependency Update
+name: PreRelease
+
+on:
+  pull_request:
+    types:
+      - closed
 
 env:
   NODE: 20
@@ -6,13 +11,8 @@ env:
   GIT_EMAIL: "actions@users.noreply.github.com"
   GIT_BRANCH: actions/update-icons
 
-on:
-  pull_request:
-    types:
-      - closed
-
 jobs:
-  dependency_update:
+  version_update:
     name: Update icons
     runs-on: ubuntu-latest
     if: |
@@ -25,13 +25,19 @@ jobs:
           node-version: "${{ env.NODE }}"
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm run build
-      - name: Creating PR for new Icons
+      - name: Dependency Update
+        run: npm run build
+      - name: Version Update
+        run: |-
+          npm version patch --no-git-tag-version
+          npm run update:changelog
+      - name: Create Merge Request
         run: |-
           timestamp=$(date +"%Y-%m-%d")
           git config user.name ${{ env.GIT_USER }}
           git config user.email ${{ env.GIT_EMAIL }}
           git checkout -b "${{ env.GIT_BRANCH }}-${timestamp}"
+          git fetch -A
           git add -A
           git commit -m "Update icons with dependency update" || exit 0
           git push --set-upstream origin ${{ env.GIT_BRANCH }}-${timestamp}
