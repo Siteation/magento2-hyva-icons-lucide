@@ -1,23 +1,22 @@
 name: PreRelease
 
-on:
-  pull_request:
-    types:
-      - closed
-
 env:
   NODE: 20
   GIT_USER: "Automated"
   GIT_EMAIL: "actions@users.noreply.github.com"
   GIT_BRANCH: actions/update-icons
 
+on:
+  pull_request:
+    types:
+      - closed
+
 jobs:
   version_update:
-    name: Update icons
-    runs-on: ubuntu-latest
     if: |
       github.event.pull_request.merged == true &&
       startsWith(github.event.pull_request.head.ref, 'dependabot/')
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -27,10 +26,8 @@ jobs:
       - run: npm ci
       - name: Dependency Update
         run: npm run build
-      - name: Version Update
-        run: |-
-          npm version patch --no-git-tag-version
-          npm run update:changelog
+      - name: Update Changelog
+        run: npm run update:changelog
       - name: Create Merge Request
         run: |-
           timestamp=$(date +"%Y-%m-%d")
