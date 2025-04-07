@@ -34,7 +34,7 @@ jobs:
           git config user.name ${{ env.GIT_USER }}
           git config user.email ${{ env.GIT_EMAIL }}
           git checkout -b "${{ env.GIT_BRANCH }}-${timestamp}"
-          git fetch -A
+          git fetch -a
           git add -A
           git commit -m "Update icons with dependency update" || exit 0
           git push --set-upstream origin ${{ env.GIT_BRANCH }}-${timestamp}
