@@ -18,14 +18,14 @@ fs.readFile(packageJsonFile, "utf8", (err, packageData) => {
     }
 
     const packageJson = JSON.parse(packageData);
-    const version = packageJson.version;
-    const lucideVersion = packageJson.dependencies["lucide-static"].replace(
+    const version = "...";
+    const lucideVersion = packageJson.devDependencies["lucide-static"].replace(
         "^",
         ""
     ); //remove caret if it exists
     const currentDate = formatDate(new Date());
 
-    const newContent = `## ${version} - ${currentDate}\n### Changed\n- updated lucide-static to v${lucideVersion}`;
+    const newContent = `## ${version} - ${currentDate}\n\n### Changed\n- updated Lucide icons to v${lucideVersion}`;
 
     fs.readFile(changelogFile, "utf8", (err, changelogData) => {
         if (err) {
