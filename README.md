@@ -65,6 +65,9 @@ Bringing svg icon support to you CMS pages, Blocks and Widgets.
 
 _If you are looking for a Luma based option [checkout this icon pack instead](https://github.com/GrimLink/magento2-icon-packs)._
 
+> [!note]
+> **Note:** Starting from Hyvä version 1.3.15, Hyvä includes its own Lucide Icons integration. This implementation differs slightly from the one provided by this module, but both can be used alongside each other without conflict.
+
 ## Icon License
 
 [Lucide Icons](https://lucide.dev/) used in this module were created by [Lucide Contributors](https://github.com/lucide-icons) under a [ISC License, found here](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
