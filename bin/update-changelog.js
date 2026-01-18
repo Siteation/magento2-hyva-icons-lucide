@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+const newVersion = process.argv[2];
 const changelogFile = "CHANGELOG.md";
 const lineToFind = "## Unreleased";
 const packageJsonFile = "package.json";
@@ -18,10 +19,10 @@ fs.readFile(packageJsonFile, "utf8", (err, packageData) => {
     }
 
     const packageJson = JSON.parse(packageData);
-    const version = "...";
+    const version = newVersion || "...";
     const lucideVersion = packageJson.devDependencies["lucide-static"].replace(
         "^",
-        ""
+        "",
     ); //remove caret if it exists
     const currentDate = formatDate(new Date());
 
