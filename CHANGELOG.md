@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 2.3.0 - 2026-03-24
+
+### Changed
+- Updated Lucide icons to v1.0.1.
+  **Minor Breaking Change:** All branded icons have been removed.
+  For branded icons, use [Simple Icons](https://simpleicons.org/) instead.
+
 ## 2.2.10 - 2026-01-18
 
 ### Changed
