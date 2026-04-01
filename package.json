@@ -23,7 +23,7 @@
     "version": "node ./bin/update-version.js $npm_package_version && node ./bin/update-changelog.js $npm_package_version && git add composer.json CHANGELOG.md"
   },
   "devDependencies": {
-    "lucide-static": "^1.0.1",
+    "lucide-static": "^1.7.0",
     "svgo": "^4.0.1"
   }
 }
