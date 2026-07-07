@@ -1,6 +1,6 @@
 {
   "name": "@sitation/magento2-hyva-icons-lucide",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "the npm pkg is here just here to update the Lucide icons for Hyvä",
   "homepage": "https://siteation.dev",
   "author": {
@@ -23,7 +23,7 @@
     "version": "node ./bin/update-version.js $npm_package_version && node ./bin/update-changelog.js $npm_package_version && git add composer.json CHANGELOG.md"
   },
   "devDependencies": {
-    "lucide-static": "^1.22.0",
+    "lucide-static": "^1.23.0",
     "svgo": "^4.0.1"
   }
 }
